@@ -35,11 +35,7 @@ print("Y Part of Train :",y_train)
 
 from sklearn.preprocessing import MinMaxScaler
 nm = MinMaxScaler()
-# x_train[:, 3:] = nm.fit_transform(x_train[:, 3:])
-# x_test[:, 3:] = nm.transform(x_test[:, 3:])
+x_train[:, 3:] = nm.fit_transform(x_train[:, 3:])
+x_test[:, 3:] = nm.transform(x_test[:, 3:])
 
-x_train[:, 1:3] = nm.fit_transform(x_train[:, 1:3])  # Adjust based on your actual data columns
-x_test[:, 1:3] = nm.transform(x_test[:, 1:3])
-
-print("Normalised X Part of Train :\n",x_train[:, 1:3])
-print("Normalised X Part of TEST :\n",x_test[:, 1:3])
+print(x_train[:, 3:])
